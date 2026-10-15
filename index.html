@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechNova Perú: laptops, computadoras, componentes y accesorios tecnológicos.">
+  <meta name="theme-color" content="#101828">
+  <title>TechNova Perú | Tecnología para tu mundo</title>
+  <link rel="stylesheet" href="css/01-estilos-tienda.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="wrap announcement-inner">
+      <span>🚚 Delivery coordinado en Lima</span><span>💳 Consulta opciones de pago</span><span>💬 Atención por WhatsApp</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-main">
+      <a class="brand" href="#" aria-label="TechNova Perú inicio">
+        <span class="brand-mark">TN</span>
+        <span class="brand-name">TechNova <small>PERÚ · TECNOLOGÍA</small></span>
+      </a>
+      <form class="search" id="searchForm" role="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Busca laptops, memorias, impresoras..." aria-label="Buscar productos">
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="header-actions">
+        <button class="text-action" id="adminOpenBtn" type="button"><span>⚙</span><small>Administrar</small></button>
+        <button class="cart-action" id="cartOpenBtn" type="button" aria-label="Abrir carrito"><span>🛒</span><span class="cart-label">Carrito</span><b id="cartCount">0</b></button>
+      </div>
+    </div>
+    <nav class="category-nav">
+      <div class="wrap category-list" id="categoryList">
+        <button class="category-pill active" data-category="Todos">Todos los productos</button>
+        <button class="category-pill" data-category="Laptops">Laptops</button>
+        <button class="category-pill" data-category="Computadoras">Computadoras</button>
+        <button class="category-pill" data-category="Componentes">Componentes</button>
+        <button class="category-pill" data-category="Monitores">Monitores</button>
+        <button class="category-pill" data-category="Impresoras">Impresoras</button>
+        <button class="category-pill" data-category="Redes">Redes</button>
+        <button class="category-pill" data-category="Periféricos">Periféricos</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> TU PRÓXIMO NIVEL TECNOLÓGICO</span>
+          <h1>Tecnología que<br><em>impulsa tus ideas.</em></h1>
+          <p>Encuentra equipos y componentes para trabajar, estudiar, crear y jugar. Consulta disponibilidad y coordina tu compra fácilmente.</p>
+          <a class="button button-primary" href="#catalogo">Explorar catálogo <span>→</span></a>
+          <div class="hero-benefits"><span>✓ Atención personalizada</span><span>✓ Productos seleccionados</span></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración de productos tecnológicos">
+          <div class="art-glow"></div><div class="art-window"><div class="art-window-top"><i></i><i></i><i></i><span>TECH / NOVA</span></div><div class="art-screen">TN<span>TECHNOLOGY</span></div></div>
+          <div class="floating-chip chip-one">⚡ Alto rendimiento</div><div class="floating-chip chip-two">⌁ Conectividad</div>
+          <div class="art-base"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="wrap trust-grid">
+        <div><span class="trust-icon">◈</span><span><b>Equipos y componentes</b><small>Para cada necesidad</small></span></div>
+        <div><span class="trust-icon">▣</span><span><b>Compra asistida</b><small>Resuelve tus consultas</small></span></div>
+        <div><span class="trust-icon">↗</span><span><b>Pedido por WhatsApp</b><small>Coordina antes de pagar</small></span></div>
+      </div>
+    </section>
+
+    <section class="wrap catalog-section" id="catalogo">
+      <div class="section-top">
+        <div><span class="eyebrow eyebrow-dark">CATÁLOGO TECHNOVA</span><h2>Encuentra lo que necesitas</h2><p>Revisa imágenes, características, videos y disponibilidad de cada producto.</p></div>
+        <div class="catalog-tools">
+          <label class="select-label">Ordenar por
+            <select id="sortSelect"><option value="featured">Recomendados</option><option value="priceAsc">Precio: menor a mayor</option><option value="priceDesc">Precio: mayor a menor</option><option value="name">Nombre A-Z</option></select>
+          </label>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span id="resultsCount">Productos</span>
+        <label class="stock-filter"><input type="checkbox" id="inStockOnly"> Mostrar disponibles</label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><span>⌕</span><h3>No encontramos productos</h3><p>Prueba con otra búsqueda o categoría.</p><button class="button button-outline" id="resetFiltersBtn" type="button">Ver todo el catálogo</button></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <div><a class="brand brand-footer" href="#"><span class="brand-mark">TN</span><span class="brand-name">TechNova <small>PERÚ · TECNOLOGÍA</small></span></a><p>Soluciones tecnológicas para tu hogar, estudio y negocio.</p></div>
+      <div><h3>Catálogo</h3><a href="#catalogo">Laptops y computadoras</a><a href="#catalogo">Componentes</a><a href="#catalogo">Redes y periféricos</a></div>
+      <div><h3>Atención al cliente</h3><p>Lima, Perú</p><p>Pedidos y consultas por WhatsApp</p><small>Revisa disponibilidad antes de realizar el pago.</small></div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> TechNova Perú. Todos los derechos reservados.</div>
+  </footer>
+
+  <div class="scrim hidden" id="scrim"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow eyebrow-dark">TU COMPRA</span><h2>Carrito</h2></div><button class="icon-button" id="cartCloseBtn" aria-label="Cerrar carrito">✕</button></div>
+    <div class="cart-lines" id="cartLines"></div>
+    <div class="drawer-bottom"><div class="total-line"><span>Subtotal estimado</span><strong id="cartSubtotal">S/ 0.00</strong></div><p>El costo de envío se coordina por WhatsApp.</p><button class="button button-primary button-block" id="checkoutBtn">Continuar por WhatsApp →</button><button class="button button-quiet button-block" id="clearCartBtn">Vaciar carrito</button></div>
+  </aside>
+
+  <section class="modal hidden" id="productModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="modal-card product-modal-card"><button class="modal-x" data-close="productModal" aria-label="Cerrar">✕</button><div id="productDetail"></div></div>
+  </section>
+
+  <section class="modal hidden" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="modal-card admin-modal-card"><button class="modal-x" data-close="adminModal" aria-label="Cerrar">✕</button>
+      <div class="admin-title-row"><div><span class="eyebrow eyebrow-dark">GESTIÓN DE INVENTARIO</span><h2 id="adminTitle">Administrar productos</h2><p>Actualiza precios, unidades y datos del catálogo.</p></div><span class="admin-symbol">⚙</span></div>
+      <div class="admin-notice"><b>Importante:</b> esta versión guarda los cambios en este navegador mediante localStorage. No sincroniza el stock con otros dispositivos ni protege un acceso de administrador. Para una tienda pública real, conectaremos una base de datos y un inicio de sesión seguro.</div>
+      <div class="inventory-summary" id="inventorySummary"></div>
+      <form id="productForm" class="admin-form">
+        <input type="hidden" id="editProductId">
+        <div class="form-field"><label for="pName">Nombre del producto *</label><input id="pName" required maxlength="100" placeholder="Ej. Laptop Lenovo IdeaPad"></div>
+        <div class="form-two"><div class="form-field"><label for="pBrand">Marca</label><input id="pBrand" placeholder="Ej. Lenovo"></div><div class="form-field"><label for="pModel">Modelo / SKU</label><input id="pModel" placeholder="Ej. IP-15-01"></div></div>
+        <div class="form-two"><div class="form-field"><label for="pCategory">Categoría</label><select id="pCategory"><option>Laptops</option><option>Computadoras</option><option>Componentes</option><option>Monitores</option><option>Impresoras</option><option>Redes</option><option>Periféricos</option><option>Accesorios</option></select></div><div class="form-field"><label for="pPrice">Precio (S/) *</label><input id="pPrice" type="number" min="0" step="0.01" required></div></div>
+        <div class="form-two"><div class="form-field"><label for="pStock">Unidades en stock *</label><input id="pStock" type="number" min="0" step="1" required></div><div class="form-field"><label for="pLowStock">Avisar cuando queden</label><input id="pLowStock" type="number" min="0" step="1" value="3"></div></div>
+        <div class="form-field"><label for="pDescription">Descripción / características</label><textarea id="pDescription" rows="3" placeholder="Procesador, memoria, capacidad, conectividad..."></textarea></div>
+        <div class="form-field image-upload-field">
+          <label for="pImageFiles">Fotos del producto</label>
+          <input id="pImageFiles" type="file" accept="image/*" multiple>
+          <small>Selecciona una o varias fotos desde tu computadora. Se guardarán con el producto.</small>
+          <div id="imagePreview" class="image-preview-grid" aria-live="polite"></div>
+          <label class="check-field image-remove-option"><input id="pRemoveExistingImages" type="checkbox"> Reemplazar las fotos actuales por las nuevas</label>
+        </div>
+        <div class="form-field"><label for="pImages">O agregar imágenes mediante enlaces (opcional)</label><textarea id="pImages" rows="2" placeholder="https://tu-sitio.com/foto-frontal.jpg&#10;https://tu-sitio.com/foto-lateral.jpg"></textarea><small>Usa enlaces directos a archivos de imagen; también puedes subirlas desde tu computadora arriba.</small></div>
+        <div class="form-field"><label for="pVideo">URL del video demostrativo (opcional)</label><input id="pVideo" type="url" placeholder="https://... o enlace de YouTube"></div>
+        <label class="check-field"><input id="pFeatured" type="checkbox"> Destacar producto en el catálogo</label>
+        <div class="admin-form-actions"><button type="submit" class="button button-primary" id="saveProductBtn">Guardar producto</button><button type="button" class="button button-outline hidden" id="cancelEditBtn">Cancelar edición</button></div>
+      </form>
+      <div class="inventory-list-head"><h3>Inventario actual</h3><input id="inventorySearch" type="search" placeholder="Buscar en inventario..."></div>
+      <div class="inventory-table-wrap"><table class="inventory-table"><thead><tr><th>Producto</th><th>Precio</th><th>Stock</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="inventoryRows"></tbody></table></div>
+    </div>
+  </section>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="js/01-catalogo-carrito-administracion.js"></script>
+</body>
+</html>
